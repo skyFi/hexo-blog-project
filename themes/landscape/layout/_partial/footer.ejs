@@ -1,0 +1,23 @@
+<div id="gitment-container"></div>
+<script>
+  var gitment = new Gitment({
+    owner: 'skyFi',
+    repo: 'gitment-comments',
+    oauth: {
+      client_id: 'b1466a7680c0f4503a15',
+      client_secret: '7121c0f81b7a2fe90ee00e7ae1558117dd6d243c',
+    },
+  })
+  gitment.render('gitment-container')
+</script>
+<footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
