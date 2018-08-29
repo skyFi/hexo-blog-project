@@ -11,7 +11,7 @@ script:
   - npm run gen
 deploy:
   provider: pages
-  local-dir: ".deploy_git"
+  local-dir: "public"
   repo: "https://github.com/skyFi/skyfi.github.io.git"
   target-branch: master
   project-name: "skyfi.github.io"
