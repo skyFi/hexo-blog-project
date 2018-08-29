@@ -9,3 +9,16 @@ before_script:
   - npm install
 script:
   - npm run release
+deploy:
+  provider: pages
+  local-dir: ".deploy_git"
+  repo: "https://github.com/skyFi/skyfi.github.io.git"
+  target-branch: master
+  project-name: "skyfi.github.io"
+  email: "fyl_2525@163.com"
+  name: "skylor"
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
