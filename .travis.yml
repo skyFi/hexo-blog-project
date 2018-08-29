@@ -12,7 +12,7 @@ script:
 deploy:
   provider: pages
   local-dir: "public"
-  repo: "https://github.com/skyFi/skyfi.github.io.git"
+  repo: "skyFi/skyfi.github.io"
   target-branch: master
   project-name: "skyfi.github.io"
   email: "fyl_2525@163.com"
