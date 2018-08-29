@@ -1,0 +1,148 @@
+<html>
+<head>
+  <script src="https://g.alicdn.com/bizcharts/io-asserts/3.1.2/react16.0.0.production.min.js"></script>
+  <script src="https://g.alicdn.com/bizcharts/io-asserts/3.1.2/react-dom16.0.0.production.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
+  <script src="https://g.alicdn.com/bizcharts/io-asserts/3.1.5/BizCharts.min.js"></script>
+  <script type="text/javascript" src="https://gw.alipayobjects.com/os/antv/assets/data-set/0.8.6/data-set.min.js"></script>
+
+  <style>
+    .input-box {
+      margin: 8px auto;
+      max-width: 300px;
+    }
+    .label {
+      display: inline-block;
+      width: 120px;
+      margin-right: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: right;
+      height: 32px;
+      line-height: 32px;
+    }
+    .input {
+      height: 32px;
+      line-height: 32px;
+    }
+    .btn {
+      margin: 30px auto 40px;
+      width: 80px;
+      padding: 9px 0;
+      text-align: center;
+      background-color: #1890ff;
+      color: white;
+      cursor: pointer;
+      transition: all .15s;
+      border-radius: 4px;
+    }
+    .btn:hover {
+      opacity: 0.8;
+    }
+  </style>
+  <script type="text/babel">
+    const {Chart, Geom, Axis, Tooltip, Coord, Label, Legend, View, Guide, Shape} = window.BizCharts;
+
+    window.submitRadar = function submitRadar() {
+      render([
+        {"key": "artisticScore", "value": "艺术型（A）", score: Math.min(document.querySelector('#a').value || undefined, 10)},
+        {"key": "conventionalScore", "value": "常规型（C）", score: Math.min(document.querySelector('#c').value || undefined, 10)},
+        {"key": "enterprisingScore", "value": "管理型（E）", score: Math.min(document.querySelector('#e').value || undefined, 10)},
+        {"key": "investigativeScore", "value": "调研型（I）", score: Math.min(document.querySelector('#i').value || undefined, 10)},
+        {"key": "realisticScore", "value": "现实型（R）", score: Math.min(document.querySelector('#r').value || undefined, 10)},
+        {"key": "socialScore", "value": "社会型（S）", score: Math.min(document.querySelector('#s').value || undefined, 10)}
+      ])
+    }
+    const d = [
+      {"key": "artisticScore", "value": "艺术型（A）", score: undefined},
+      {"key": "conventionalScore", "value": "常规型（C）", score: undefined},
+      {"key": "enterprisingScore", "value": "管理型（E）", score: undefined},
+      {"key": "investigativeScore", "value": "调研型（I）", score: undefined},
+      {"key": "realisticScore", "value": "现实型（R）", score: undefined},
+      {"key": "socialScore", "value": "社会型（S）", score: undefined}
+    ];
+    render(d);
+    function render(data) {
+      ReactDOM.render((
+        <Chart height={300} forceFit data={data} padding={[20, 30, 30, 20]}
+               scale={{score: { min: 1, max: 10, formatter: () => '' } }} >
+          <Coord type="polar" radius={0.7} />
+          <Axis
+            name="value"
+            line={null}
+            tickLine={null}
+            grid={{
+              lineStyle: {
+                lineDash: null,
+              },
+              hideFirstLine: false,
+            }}
+          />
+          <Tooltip showTitle={false} />
+          <Axis
+            name="score"
+            line={null}
+            tickLine={null}
+            grid={{
+              type: 'polygon',
+              lineStyle: {
+                lineDash: null,
+              },
+              alternateColor: ['#f5f6f7', '#f5f6f7'],
+            }}
+          />
+          <Geom type="area" position="value*score" color="#239BF7" opacity={0.5} />
+          <Geom
+            type="line"
+            position="value*score"
+            color="#239BF7"
+            size={0}
+            tooltip={['value*score', (value, score) => {
+              return {
+                name: value,
+                value: score,
+              };
+            }]}
+          />
+          <Geom
+            type="point"
+            position="value*score"
+            color="#fff"
+            shape="circle"
+            size={3}
+            style={{
+              stroke: '#d9d9d9',
+              lineWidth: 0.5,
+              fillOpacity: 1,
+            }}
+          />
+        </Chart>
+      ), document.getElementById("mountNode"));
+    }
+  </script>
+</head>
+<body>
+<div class="input-box"><span class="label">艺术型（A）: </span><input autocomplete="off" class="input" type="number" id="a" /></div>
+<div class="input-box"><span class="label">常规型（C）: </span><input autocomplete="off" class="input" type="number" id="c" /></div>
+<div class="input-box"><span class="label">管理型（E）: </span><input autocomplete="off" class="input" type="number" id="e" /></div>
+<div class="input-box"><span class="label">调研型（I）: </span><input autocomplete="off" class="input" type="number" id="i" /></div>
+<div class="input-box"><span class="label">现实型（R）: </span><input autocomplete="off" class="input" type="number" id="r" /></div>
+<div class="input-box"><span class="label">社会型（S）: </span><input autocomplete="off" class="input" type="number" id="s" /></div>
+<div class="btn" onclick="submitRadar()">生成</div>
+<div id="mountNode">
+  <div>
+    <div>
+      <div style="position:relative;">
+        <canvas id="canvas_1" width="1234" height="600" style="width: 617px; height: 300px;"></canvas>
+        <div className="g2-tooltip"
+             style="position: absolute; visibility: hidden; white-space: nowrap; z-index: 8; transition: visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(0, 0, 0, 0.65); border-radius: 4px; color: rgb(255, 255, 255); font-size: 12px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, SimSun, sans-serif; line-height: 20px; padding: 10px 10px 6px;">
+          <div className="g2-tooltip-title"></div>
+          <ul className="g2-tooltip-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="text-align: right; font-size: 12px; color: #999; width: 300px; margin: 30px auto;">Power by <a href="https://blog.fangyongle.com/" target="_blank" style="font-size: 12px; color: #999;">skylor.min</a></div>
+</body>
+</html>

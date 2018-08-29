@@ -84,8 +84,8 @@
 
         <div class="links-of-author motion-element">
           {% if theme.social %}
-            {% for name, link in theme.social %}
-              <span class="links-of-author-item">
+          {% for name, link in theme.social %}
+          <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank" title="{{ name }}">
                   {% if theme.social_icons.enable %}
                     <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
@@ -95,7 +95,7 @@
                     {% endif %}
                 </a>
               </span>
-            {% endfor %}
+          {% endfor %}
           {% endif %}
         </div>
 

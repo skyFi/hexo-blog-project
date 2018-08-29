@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "fangyongle, blog"
+keywords: "方永乐, fangyongle, skylor, skyFi, skyfi, skylor.min, blog, github, 博客, hexo, gitalk"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -48,10 +48,11 @@ index_with_subtitle: false
 menu:
   home: /
   #categories: /categories/
-  #about: /about/
   archives: /archives/
   tags: /tags/
-  #sitemap: /sitemap.xml
+  sitemap: /sitemap.xml
+  about: /about/
+  tools: /tools/
   #commonweal: /404/
 
 # Enable/Disable menu icons.
@@ -71,6 +72,14 @@ menu_icons:
   sitemap: sitemap
   commonweal: heartbeat
 
+# ---------------------------------------------------------------
+# Sitemap Settings
+# ---------------------------------------------------------------
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+url: https://blog.fangyongle.com
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -120,11 +129,12 @@ social_icons:
   Weibo: weibo
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
+links_title: 友情链接
+links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  我的书签: https://blog.fangyongle.com/2018/07/27/%E4%B9%A6%E7%AD%BE/
+  上官逸彦: https://www.jianshu.com/u/2ff0441e6a86
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -158,7 +168,7 @@ sidebar:
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
   display: post
-  #display: always
+#  display: always
   #display: hide
   #display: remove
 
@@ -193,7 +203,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 450
+  length: 350
 
 # Post meta display settings
 post_meta:
@@ -217,8 +227,8 @@ post_wordcount:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
-#reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
+reward_comment: 恰好你喜欢，恰好想喝咖啡
+wechatpay: /images/wechatpay.jpg
 alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
