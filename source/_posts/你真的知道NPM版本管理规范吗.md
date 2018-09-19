@@ -4,9 +4,8 @@ date: 2018-09-19 21:24:23
 tags: 笔记
 ---
 
-# NPM Version Management Specification
-
 ![](/images/pack.jpeg)
+NPM Version Management Specification
 
 ## 来源
 
