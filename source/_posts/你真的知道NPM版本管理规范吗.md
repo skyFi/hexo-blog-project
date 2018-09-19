@@ -6,7 +6,7 @@ tags: 笔记
 
 # NPM Version Management Specification
 
-![](/images/npm-pack.png)
+![](/images/pack.jpeg)
 
 ## 来源
 
