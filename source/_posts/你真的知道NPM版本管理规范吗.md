@@ -28,7 +28,7 @@ BOOOOOM！继续报错，寻遍 issue 未发现错误原因以及真正的解决
 ```
 常规`rm -rf node_modules && cnpm install`，小段时间的等待之后，发现错误并没有消失，奇了怪了～～
 
-继续查看依赖包的依赖包，发现它要`@7.0.0-beta.41`，而在我的`node_modules/`黑洞里的`@babel/runtime`却安装的是`7.0.0`版本，Bingo，问题找到了，锁个版本，修改如下：
+继续查看依赖包的依赖包，发现它要`7.0.0-beta.41`，而在我的`node_modules/`黑洞里的`@babel/runtime`却安装的是`7.0.0`版本，Bingo，问题找到了，锁个版本，修改如下：
 
 ```json
 - "@babel/runtime": "^7.0.0-beta.41"
