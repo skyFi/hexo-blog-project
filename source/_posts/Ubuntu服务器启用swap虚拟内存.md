@@ -4,6 +4,8 @@ date: 2018-09-21 22:54:38
 tags: 笔记
 ---
 
+![](/images/kernel.jpg)
+
 1. 查看当前虚拟内存： `cat /proc/swaps`
 2. 创建swap文件：`sudo dd if=/dev/zero of=swaps bs=512 count=8388616`；其中swaps大小为：`bs*count=4G`
 3. 通过`mkswap`命令把上一步创建的文件做成swap分区：`mkswap /path/to/swaps`
