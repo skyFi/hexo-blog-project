@@ -4,7 +4,7 @@ date: 2018-09-21 23:51:38
 tags: 笔记
 ---
 
-![](/images/bookmark.jpg)
+![](/images/roadblock.jpg)
 
 nginx 是一个灵活且高效的网络服务器，如果想要在nginx服务器中重定，你可以从下面挑选一个适合的方式。
 
