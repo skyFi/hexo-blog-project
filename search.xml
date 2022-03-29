@@ -9,6 +9,11 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[new_test_post]]></title>
+    <url>%2F2022%2F03%2F29%2Fnew-test-post%2Findex.html</url>
+    <content type="text"><![CDATA[demo]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[【一】从零开始学习ios app开发（swift）]]></title>
     <url>%2F2022%2F03%2F25%2F%E3%80%90%E4%B8%80%E3%80%91%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0ios_app%E5%BC%80%E5%8F%91%EF%BC%88swift%EF%BC%89%2Findex.html</url>
     <content type="text"></content>
