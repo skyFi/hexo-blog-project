@@ -16,7 +16,7 @@ timezone:
 url: https://blog.fangyongle.com
 #url: https://skyfi.github.io
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:title/index.html
 permalink_defaults:
 
 # Directory
@@ -44,7 +44,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -79,7 +79,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git 
+  type: git
   repo: https://github.com/skyFi/skyfi.github.io.git
   branch: master
   message: 'Update Posts: {{ now("YYYY-MM-DD HH:mm:ss") }}'
