@@ -9,6 +9,7 @@
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
+  <link rel="icon" type="image/png" href="https://upload.fangyongle.com/%E9%AB%98%E6%B8%85logo%E9%80%8F%E6%98%8E%E5%BA%95%E5%8E%9F%E8%89%B2%E5%AD%97.png" sizes="32x32">
   {% include '_third-party/analytics/index.swig' %}
 </head>
 

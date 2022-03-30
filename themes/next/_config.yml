@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+#favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "方永乐, fangyongle, skylor, skyFi, skyfi, skylor.min, blog, github, 博客, hexo, gitalk"
