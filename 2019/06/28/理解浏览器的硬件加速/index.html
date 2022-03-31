@@ -87,6 +87,8 @@
 
 
 
+  <link rel="shortcut icon" type="image/x-icon" href="https://upload.fangyongle.com/%E9%AB%98%E6%B8%85logo%E9%80%8F%E6%98%8E%E5%BA%95%E5%8E%9F%E8%89%B2%E5%AD%97.png?v=5.1.2" />
+
 
 
 
@@ -96,30 +98,30 @@
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解浏览器">
-<meta property="og:url" content="https://blog.fangyongle.com/2019/06/28/理解浏览器的硬件加速/index.html">
+<meta property="og:url" content="https://www.fangyongle.com/2019/06/28/理解浏览器的硬件加速/index.html">
 <meta property="og:site_name" content="蓝色鸢尾">
 <meta property="og:description" content="介绍作为前端开发者，我们知道硬件加速(hardware acceleration)能够提升页面的渲染性能，提高动画的流畅度。也知道可以通过设置transform等CSS3属性来手动开启硬件加速，也就是GPU加速。本文将介绍在 Chrome 中，为 web 内容提供硬件加速的基本模型。 申明本文中讨论的内容都是基于 Chrome 浏览器，也就是 WebKit 内核，更准确的说，是讨论 WebKit">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://blog.fangyongle.com/images/timeline_of_web_browsers.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/浏览器结构.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/browser-render-path.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/full-process.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/dom-tree.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/cssom-construction.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/cssom-tree.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/render-tree-construction.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/layout-viewport.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/webkitflow.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/dom-render-layer.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/browser-render-path.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/csstrigger-shot.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/HandlingMultipleContexts.png">
-<meta property="og:image" content="https://blog.fangyongle.com/images/浏览器渲染整个流程.jpg">
-<meta property="og:updated_time" content="2022-03-30T07:57:01.256Z">
+<meta property="og:image" content="https://www.fangyongle.com/images/timeline_of_web_browsers.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/浏览器结构.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/browser-render-path.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/full-process.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/dom-tree.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/cssom-construction.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/cssom-tree.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/render-tree-construction.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/layout-viewport.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/webkitflow.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/dom-render-layer.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/browser-render-path.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/csstrigger-shot.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/HandlingMultipleContexts.png">
+<meta property="og:image" content="https://www.fangyongle.com/images/浏览器渲染整个流程.jpg">
+<meta property="og:updated_time" content="2022-03-31T02:21:10.483Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解浏览器">
 <meta name="twitter:description" content="介绍作为前端开发者，我们知道硬件加速(hardware acceleration)能够提升页面的渲染性能，提高动画的流畅度。也知道可以通过设置transform等CSS3属性来手动开启硬件加速，也就是GPU加速。本文将介绍在 Chrome 中，为 web 内容提供硬件加速的基本模型。 申明本文中讨论的内容都是基于 Chrome 浏览器，也就是 WebKit 内核，更准确的说，是讨论 WebKit">
-<meta name="twitter:image" content="https://blog.fangyongle.com/images/timeline_of_web_browsers.png">
+<meta name="twitter:image" content="https://www.fangyongle.com/images/timeline_of_web_browsers.png">
 
 
 
@@ -147,7 +149,7 @@
 </script>
 
 
-  <link rel="canonical" href="https://blog.fangyongle.com/2019/06/28/理解浏览器的硬件加速/"/>
+  <link rel="canonical" href="https://www.fangyongle.com/2019/06/28/理解浏览器的硬件加速/"/>
 
 
 
@@ -352,7 +354,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.fangyongle.com">
+    <link itemprop="mainEntityOfPage" href="https://www.fangyongle.com">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="方永乐">
@@ -669,7 +671,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.fangyongle.com/2019/06/28/理解浏览器的硬件加速/index.html" title="深入理解浏览器">https://blog.fangyongle.com/2019/06/28/理解浏览器的硬件加速/index.html</a>
+    <a href="https://www.fangyongle.com/2019/06/28/理解浏览器的硬件加速/index.html" title="深入理解浏览器">https://www.fangyongle.com/2019/06/28/理解浏览器的硬件加速/index.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -868,7 +870,7 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://blog.fangyongle.com/2018/07/27/%E4%B9%A6%E7%AD%BE/" title="我的书签" target="_blank">我的书签</a>
+                  <a href="https://www.fangyongle.com/2018/07/27/%E4%B9%A6%E7%AD%BE/" title="我的书签" target="_blank">我的书签</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
