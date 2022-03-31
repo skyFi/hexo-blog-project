@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-#favicon: /favicon.ico
+favicon: https://upload.fangyongle.com/%E9%AB%98%E6%B8%85logo%E9%80%8F%E6%98%8E%E5%BA%95%E5%8E%9F%E8%89%B2%E5%AD%97.png
 
 # Set default keywords (Use a comma to separate)
 keywords: "方永乐, fangyongle, skylor, skyFi, skyfi, skylor.min, blog, github, 博客, hexo, gitalk"
@@ -20,7 +20,7 @@ since: 2018
 authoricon: heart
 
 # Footer `powered-by` and `theme-info` copyright
-copyright: true
+copyright: false
 
 
 # ---------------------------------------------------------------
@@ -79,7 +79,7 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
-url: https://blog.fangyongle.com
+url: https://www.fangyongle.com
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -133,7 +133,7 @@ links_title: 友情链接
 links_layout: block
 #links_layout: inline
 links:
-  我的书签: https://blog.fangyongle.com/2018/07/27/%E4%B9%A6%E7%AD%BE/
+  我的书签: https://www.fangyongle.com/2018/07/27/%E4%B9%A6%E7%AD%BE/
   上官逸彦: https://www.jianshu.com/u/2ff0441e6a86
 
 # Sidebar Avatar

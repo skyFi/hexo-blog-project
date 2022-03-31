@@ -139,8 +139,8 @@ if ( $host ~ ^www\.(?<domain>.+)$ ) {
 
 ```javascript
 $scheme		       // HTTP方法（如http，https）,如：http
-$host			   // 请求主机头字段，否则为服务器名称，如:blog.fangyongle.com
-$server_name	   // 服务器名称，如：blog.fangyongle.com
+$host			   // 请求主机头字段，否则为服务器名称，如:www.fangyongle.com
+$server_name	   // 服务器名称，如：www.fangyongle.com
 $request_uri	   // 包含请求参数的原始URI，不包含主机名，如：/2018/81.html?a=1&b=2
 $request_filename  // 当前请求的文件的路径名，由root或alias和URI request组合而成，如：/2013/81.html
 ```
@@ -151,7 +151,7 @@ $remote_addr		//获取客户端ip
 $binary_remote_addr	//客户端ip（二进制)
 $remote_port		//客户端port，如：50472
 $remote_user		//已经经过Auth Basic Module验证的用户名
-$host			//请求主机头字段，否则为服务器名称，如:blog.fangyongle.com
+$host			//请求主机头字段，否则为服务器名称，如:www.fangyongle.com
 $request		//用户请求信息，如：GET ?a=1&b=2 HTTP/1.1
 $request_filename	//当前请求的文件的路径名，由root或alias和URI request组合而成，如：/2013/81.html
 $status			//请求的响应状态码,如:200
@@ -178,7 +178,7 @@ $uri			//这个变量指当前的请求URI，不包括任何参数(见$args) 如
 $request_completion	//如果请求结束，设置为OK. 当请求未结束或如果该请求不是请求链串的最后一个时，为空(Empty)，如：OK
 $server_protocol	//请求使用的协议，通常是HTTP/1.0或HTTP/1.1，如：HTTP/1.1
 $server_addr		//服务器IP地址，在完成一次系统调用后可以确定这个值
-$server_name		//服务器名称，如：blog.fangyongle.com
+$server_name		//服务器名称，如：www.fangyongle.com
 $server_port		//请求到达服务器的端口号,如：80
 ```
 
